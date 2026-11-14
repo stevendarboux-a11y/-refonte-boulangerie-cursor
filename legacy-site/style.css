@@ -1,0 +1,4 @@
+body { margin: 0; font-family: Times New Roman; }
+a { text-decoration: none; font-weight: bold; }
+a:hover { color: red !important; }
+h1 { font-size: 30px; }
