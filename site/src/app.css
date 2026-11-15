@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@source "../public";
+@source "../includes";
+
+@theme {
+  --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --color-creme: #fff8ee;
+  --color-sable: #f3e6d0;
+  --color-promo: #f6e7c1;
+  --color-encre: #2b2118;
+  --color-brun: #4a2c1a;
+  --color-lien: #6b3a12;
+  --color-or: #f0d9a8;
+  --color-erreur: #9b1c1c;
+  --color-erreur-fond: #fdecec;
+  --color-succes: #14532d;
+  --color-succes-fond: #e8f5ec;
+}

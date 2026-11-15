@@ -7,9 +7,10 @@ Site fictif, réalisé pour pratiquer Cursor.
 ```bash
 php -S localhost:8000 -t site/public    # puis ouvrir http://localhost:8000
 ```
-Tailwind (à compléter à l'étape de construction) :
+Tailwind (à lancer à la racine du dépôt, pendant le travail sur les styles) :
 ```bash
-TODO
+npm run css:watch    # recompile site/public/css/app.css à chaque changement
+npm run css:build    # une fois, CSS minifié
 ```
 
 ## Arborescence

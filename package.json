@@ -1,0 +1,12 @@
+{
+  "name": "refonte-cursor",
+  "private": true,
+  "scripts": {
+    "css:watch": "npx @tailwindcss/cli -i site/src/app.css -o site/public/css/app.css --watch",
+    "css:build": "npx @tailwindcss/cli -i site/src/app.css -o site/public/css/app.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}
