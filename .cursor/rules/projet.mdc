@@ -1,0 +1,42 @@
+---
+description: Règles générales de la refonte du site Boulangerie Lefèvre
+alwaysApply: true
+---
+
+# Projet
+
+## Contexte
+
+- Refonte de `legacy-site/` dans le dossier `site/`. La boulangerie est fictive : ne pas signaler l'e-mail `.example` ni le numéro de téléphone.
+- Reprendre les informations de `legacy-site/` (prix, horaires, adresse, actus) sans en inventer ; corriger les fautes d'orthographe.
+
+## Stack
+
+- PHP 8 sans framework, JavaScript natif minimal.
+- Tailwind CSS compilé via la CLI, pas de CDN.
+- Interdit : balises obsolètes (`font`, `center`, `marquee`), styles inline, jQuery, mise en page en tableaux.
+
+## HTML et responsive
+
+- HTML5 sémantique : `header`, `nav`, `main`, `footer` ; un seul `h1` par page ; `lang="fr"` et meta charset utf-8.
+- Mobile-first, sans défilement horizontal à 320 px ; vérifier à 375, 768 et 1280 px.
+
+## Accessibilité (WCAG AA)
+
+- Contraste minimum 4,5:1 pour le texte.
+- `alt` descriptif sur chaque image informative, `alt=""` sur les images décoratives.
+- Chaque champ de formulaire a un `label` associé ; erreurs affichées à côté du champ, pas d'`alert()`.
+- Aucun texte qui défile ou clignote ; focus visible ; tout utilisable au clavier.
+
+## Sécurité
+
+- Échapper toute donnée affichée avec `htmlspecialchars()` (protection XSS).
+- Valider chaque champ côté serveur (`filter_var` pour l'e-mail, longueur maximale, champs obligatoires) ; la validation HTML/JS n'est qu'un confort.
+- Formulaire en POST avec un jeton CSRF stocké en session et vérifié à la réception.
+- Pas d'erreurs PHP détaillées affichées aux visiteurs ; aucun secret dans le code versionné.
+- Champ « honeypot » caché contre le spam.
+
+## Méthode
+
+- Une fonctionnalité à la fois, par petites modifications faciles à relire.
+- Ne pas modifier `legacy-site/`.
