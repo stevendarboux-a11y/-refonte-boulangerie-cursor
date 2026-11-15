@@ -17,3 +17,21 @@
   --color-succes: #14532d;
   --color-succes-fond: #e8f5ec;
 }
+
+@layer base {
+  a {
+    color: var(--color-lien);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-brun);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-creme);
+  }
+}
