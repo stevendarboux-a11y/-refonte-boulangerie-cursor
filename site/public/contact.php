@@ -120,7 +120,7 @@ require __DIR__ . '/../includes/header.php';
     <p class="bg-succes-fond px-3 py-2 text-succes" role="status"><?= e($succes) ?></p>
 <?php endif; ?>
 <?php if (isset($erreurs['formulaire'])): ?>
-    <p class="bg-erreur-fond px-3 py-2 text-erreur"><?= e($erreurs['formulaire']) ?></p>
+    <p class="bg-erreur-fond px-3 py-2 text-erreur" role="alert"><?= e($erreurs['formulaire']) ?></p>
 <?php endif; ?>
     <p>Le nom, l'e-mail et le message sont enregistrés dans un fichier de la boutique, seulement pour répondre à la demande, et ne sont pas publiés.</p>
 
