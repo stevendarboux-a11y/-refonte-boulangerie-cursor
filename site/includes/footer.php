@@ -58,11 +58,11 @@ $json_ld = json_encode(
 );
 ?>
   </main>
-  <footer class="bg-brun text-white">
+  <footer class="mt-auto w-full shrink-0 bg-brun text-white">
     <address class="mx-auto max-w-5xl px-4 py-4 text-center not-italic">
       © <?= e($boutique['nom']) ?> —
       <?= e($boutique['adresse']) ?>, <?= e($boutique['cp']) ?> <?= e($boutique['ville']) ?> —
-      Tél. : <a class="text-white decoration-or underline-offset-4" href="tel:<?= e($boutique['telephone_lien']) ?>"><?= e($boutique['telephone']) ?></a>
+      <span class="whitespace-nowrap">Tél. : <a class="text-white decoration-or underline-offset-4" href="tel:<?= e($boutique['telephone_lien']) ?>"><?= e($boutique['telephone']) ?></a></span>
     </address>
   </footer>
 <?php if (is_string($json_ld)): ?>
