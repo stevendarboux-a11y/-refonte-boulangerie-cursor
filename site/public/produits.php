@@ -5,8 +5,10 @@ declare(strict_types=1);
 require __DIR__ . '/../includes/bootstrap.php';
 
 $produits = require __DIR__ . '/../data/produits.php';
+$boutique = require __DIR__ . '/../data/boutique.php';
 
-$titre = 'Nos produits';
+$titre = 'Nos produits — ' . $boutique['nom'] . ', ' . $boutique['ville'];
+$description = 'Pains, viennoiseries et pâtisseries de ' . $boutique['nom'] . ' à ' . $boutique['ville'] . '. ' . $produits['commande'];
 $page = 'produits';
 
 require __DIR__ . '/../includes/header.php';

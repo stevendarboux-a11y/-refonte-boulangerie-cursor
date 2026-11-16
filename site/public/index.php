@@ -9,7 +9,8 @@ $boutique = require __DIR__ . '/../data/boutique.php';
 $horaires = require __DIR__ . '/../data/horaires.php';
 $actus = require __DIR__ . '/../data/actus.php';
 
-$titre = $boutique['nom'];
+$titre = $boutique['nom'] . ' — ' . $boutique['ville'];
+$description = 'Boulangerie artisanale à ' . $boutique['ville'] . ' depuis ' . $boutique['depuis'] . '. Pains, viennoiseries et pâtisseries de ' . $boutique['nom'] . '.';
 $page = 'accueil';
 
 $maintenant = new DateTimeImmutable('now', new DateTimeZone($horaires['fuseau']));

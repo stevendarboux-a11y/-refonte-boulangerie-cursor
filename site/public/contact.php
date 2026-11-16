@@ -6,7 +6,8 @@ require __DIR__ . '/../includes/bootstrap.php';
 
 $boutique = require __DIR__ . '/../data/boutique.php';
 
-$titre = 'Nous contacter';
+$titre = 'Nous contacter — ' . $boutique['nom'] . ', ' . $boutique['ville'];
+$description = $boutique['nom'] . ', ' . $boutique['adresse'] . ', ' . $boutique['cp'] . ' ' . $boutique['ville'] . '. Téléphone ' . $boutique['telephone'] . '.';
 $page = 'contact';
 
 $objets = ['Commande de gâteau', 'Question', 'Autre'];
