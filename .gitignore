@@ -3,3 +3,5 @@ dist/
 .astro/
 .env
 .DS_Store
+site/data/messages/*
+!site/data/messages/.gitkeep
